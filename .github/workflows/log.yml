@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Check style
-        uses: gradle/gradle-build-action@v2
       - run: |
           echo The commiter is COMMITER
         env:
-          COMMITER: ${{ github.event.issue.head_commit.committer.name }}
+          COMMITER: ${{ github.event.issue.head_commit }}
