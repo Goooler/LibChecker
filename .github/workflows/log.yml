@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          echo The commiter is COMMITER
+          echo The message is COMMITER
         env:
-          COMMITER: ${{ github.event.issue.head_commit }}
+          COMMITER: ${{ github.event.head_commit.commiter }}
