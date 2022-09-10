@@ -12,4 +12,4 @@ jobs:
       - run: |
           echo The message is COMMITER
         env:
-          COMMITER: ${{ github.event.head_commit.commiter }}
+          COMMITER: ${{ github.event.head_commit.commiter.mame }}
